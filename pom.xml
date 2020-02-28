@@ -60,10 +60,14 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
+			<plugin><!-- don't pack the war -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
- 				<executions>
+				<executions>
+					<execution>
+						<id>default-war</id>
+						<phase>none</phase>
+					</execution>
 					<execution>
 						<id>war-exploded</id>
 						<configuration>
@@ -74,7 +78,6 @@
 						<goals>
 							<goal>exploded</goal>
 						</goals>
-						<inherited>false</inherited>						 
 					</execution>
 				</executions>
 			</plugin>

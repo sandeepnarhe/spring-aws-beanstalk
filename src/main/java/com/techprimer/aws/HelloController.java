@@ -10,7 +10,7 @@ public class HelloController {
 	
 	@GetMapping("youtube")
 	public String sayHelloYouTube() {
-		return "Hello You Tube";
+		return "Hello You Tube - V1.0";
 	}
 
 }
